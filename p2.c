@@ -23,7 +23,6 @@ typedef struct{
 /* Stack structure built on top of our Vector type */
 typedef struct{
 	Vector * v;
-	int size;
 } Stack;
 
 /* Initializes stack */
