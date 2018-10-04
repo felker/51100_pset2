@@ -5,12 +5,22 @@ typedef struct{
 	float ** arrays;
 	int m;   /* Number of arrays */
 	int * n; /* Length of each array */
+	/* Add Additional Fields Here */
 } Grid;
 
-void grid_search( float p, Grid grid, int * results )
+void improved_grid_search( float p, Grid grid, int * results )
 {
 	/* Your Code Here */
 }
+
+void init_improved_grid_search( Grid * grid )
+{
+	/* Your Code Here */
+}
+
+/* Add any additional functions you need */
+/* Add any additional functions you need */
+/* Add any additional functions you need */
 
 /* Builds and returns a small test grid */
 Grid * build_test_grid(void)
@@ -40,11 +50,12 @@ Grid * build_test_grid(void)
 int main(void)
 {
 	Grid * grid = build_test_grid();
+	init_improved_grid_search( grid );
 	int * results = (int *) malloc( grid->m * sizeof(int));
 
 	/* First test */
 	float p = 0.23;
-	grid_search(p, *grid, results);
+	improved_grid_search(p, *grid, results);
 	printf("Test p = %.2f\n", p);
 	printf("Expected: 1 1 1 2 0\n");
 	printf("Results : ");
@@ -54,7 +65,7 @@ int main(void)
 
 	/* Second test */
 	p = 0.94;
-	grid_search(p, *grid, results);
+	improved_grid_search(p, *grid, results);
 	printf("Test p = %.2f\n", p);
 	printf("Expected: 4 5 2 4 3\n");
 	printf("Results : ");
@@ -64,7 +75,7 @@ int main(void)
 
 	/* Third test */
 	p = 0.54;
-	grid_search(p, *grid, results);
+	improved_grid_search(p, *grid, results);
 	printf("Test p = %.2f\n", p);
 	printf("Expected: 3 2 1 3 1\n");
 	printf("Results : ");
