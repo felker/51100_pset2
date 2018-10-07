@@ -1,4 +1,4 @@
-CFLAGS = -ansi -pedantic -Wall -O2 -fopenmp
+CFLAGS = -Wall -O2 -std=gnu99
 CC = gcc
 
 source=$(wildcard *.c)

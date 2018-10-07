@@ -30,6 +30,7 @@ Grid * build_test_grid(void)
 	grid->n = (int *) malloc( grid->m * sizeof(int));
 
 	float ** a = (float **) malloc( grid->m * sizeof(float *)); 
+	grid->n[0] = 6; grid->n[1] = 7; grid->n[2] = 4; grid->n[3] = 6; grid->n[4] = 8;
 	a[0] = (float *) malloc(6 * sizeof(float));
 	a[1] = (float *) malloc(7 * sizeof(float));
 	a[2] = (float *) malloc(4 * sizeof(float));
