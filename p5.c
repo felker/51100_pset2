@@ -27,17 +27,17 @@ int find_word(Tree_node * dictionary, char * word)
 {
 }
 
-/* This should be identical to your find_word() function from Problem 4 */
+/* This should be identical to your print_dictionary() function from Problem 4 */
 void print_dictionary(Tree_node * dictionary)
 {
 }
 
-/* This should be identical to your find_word() function from Problem 4 */
-void clear_dictionary(Tree_node * dictionary)
+/* This should be identical to your clear_dictionary() function from Problem 4 */
+void clear_dictionary(Tree_node ** dictionary)
 {
 }
 
-/* This should be identical to your find_word() function from Problem 4 */
+/* This should be identical to your import_file() function from Problem 4 */
 int import_file(char * fname, Tree_node ** dictionary )
 {
 }
@@ -101,7 +101,7 @@ int main(void)
 			print_dictionary(dictionary);
 		/* clear dictionary */
 		if( strncmp(command, "clear", COMMAND_LEN) == 0 )
-			clear_dictionary(dictionary);
+			clear_dictionary(&dictionary);
 		/* quit program */
 		if( strncmp(command, "quit", COMMAND_LEN) == 0 )
 			break;

@@ -21,7 +21,7 @@ int find_word(Tree_node * dictionary, char * word)
 {
 }
 
-int delete_word(Tree_node * dictionary, Tree_node * parent, char * word)
+int delete_word(Tree_node ** dictionary, Tree_node * parent, char * word)
 {
 }
 
@@ -29,7 +29,7 @@ void print_dictionary(Tree_node * dictionary)
 {
 }
 
-void clear_dictionary(Tree_node * dictionary)
+void clear_dictionary(Tree_node ** dictionary)
 {
 }
 
@@ -87,7 +87,7 @@ int main(void)
 		{
 			char word[WORD_LEN];
 			scanf("%s",word);
-			error = delete_word(dictionary, dictionary, word);
+			error = delete_word(&dictionary, dictionary, word);
 			if( error == 0 )
 				printf("The word \"%s\" has been deleted successfully.\n", word);
 			else
@@ -107,7 +107,7 @@ int main(void)
 			print_dictionary(dictionary);
 		/* clear dictionary */
 		if( strncmp(command, "clear", COMMAND_LEN) == 0 )
-			clear_dictionary(dictionary);
+			clear_dictionary(&dictionary);
 		/* quit program */
 		if( strncmp(command, "quit", COMMAND_LEN) == 0 )
 			break;
