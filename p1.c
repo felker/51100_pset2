@@ -47,7 +47,7 @@ Tree_node * build_good_tree(void)
 Tree_node * build_bad_tree(void)
 {
 	/* Allocate head */
-	int n_nodes = 11;
+	int n_nodes = 12;
 	int i;
 	Tree_node * nodes = (Tree_node *) malloc(n_nodes * sizeof(Tree_node));
 	for( i = 0; i < n_nodes; i++ )
@@ -59,17 +59,18 @@ Tree_node * build_bad_tree(void)
 
 	/* Top Level */
 	nodes[5].left =  &nodes[3];
-	nodes[5].right = &nodes[7];
+	nodes[5].right = &nodes[8];
 	/* Second Level */
 	nodes[3].left =  &nodes[1];
 	nodes[3].right = &nodes[6];
-	nodes[7].left =  &nodes[6];
-	nodes[7].right = &nodes[9];
+	nodes[8].left =  &nodes[4];
+	nodes[8].right = &nodes[10];
 	/* Third Level */
 	nodes[1].left =  &nodes[0];
 	nodes[1].right = &nodes[2];
-	nodes[9].left =  &nodes[3];
-	nodes[9].right = &nodes[10];
+	nodes[6].right = &nodes[9];
+	nodes[10].left =  &nodes[7];
+	nodes[10].right = &nodes[11];
 
 	return &nodes[5];
 }
